@@ -15,4 +15,10 @@ public class StudentServiceImpl implements StudentServiceI {
 		System.out.println("push");
 	}
 
+	@Override
+	public void deleteStudentById(int id) {
+		sr.deleteById(id);
+		
+	}
+
 }
