@@ -26,13 +26,16 @@ public class HomeController {
         return new ResponseEntity<String>("Deleted succcessfully", HttpStatus.OK);
     }
 
-	@Autowired
-	StudentServiceI ssi;
+	
        
 	@GetMapping("/getAllData")
 	public Iterable<Student> getAllData(){
 		Iterable<Student> list=ssi.getAllData();
 		return list;
+	}
+	
+	public void m1() {
+		System.out.println("m1");
 	}
 
 }
