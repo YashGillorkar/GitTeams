@@ -41,6 +41,10 @@ public class HomeController {
 		Iterable<Student> list=ssi.getAllData();
 		return list;
 	}
+	
+	public void m1() {
+		System.out.println("m1");
+	}
 
 }
 
