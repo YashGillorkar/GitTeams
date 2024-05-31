@@ -10,5 +10,9 @@ import com.application.service.StudentServiceI;
 public class StudentServiceImpl implements StudentServiceI {
 	
 	@Autowired StudentRepo sr;
+	
+	public void tryMehtod() {
+		System.out.println("push");
+	}
 
 }
