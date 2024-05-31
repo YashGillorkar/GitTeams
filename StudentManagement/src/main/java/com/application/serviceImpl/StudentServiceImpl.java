@@ -23,9 +23,15 @@ public class StudentServiceImpl implements StudentServiceI {
 
 
 	@Override
+
+	public void deleteStudentById(int id) {
+		sr.deleteById(id);
+	}	
+
 	public Iterable<Student> getAllData() {
 		Iterable<Student> list=sr.findAll();
 		return list;
+
 	}
 
 }
