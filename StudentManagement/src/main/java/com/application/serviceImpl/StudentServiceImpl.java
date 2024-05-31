@@ -21,8 +21,11 @@ public class StudentServiceImpl implements StudentServiceI {
 		return save;
 	}
 
-	
-	
-	
-	
+
+	@Override
+	public Iterable<Student> getAllData() {
+		Iterable<Student> list=sr.findAll();
+		return list;
+	}
+
 }

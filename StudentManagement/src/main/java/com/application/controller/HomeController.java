@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.application.model.Student;
@@ -12,9 +13,10 @@ import com.application.service.StudentServiceI;
 
 @RestController
 public class HomeController {
-	
-	@Autowired StudentServiceI ssi;
-	
+
+	@Autowired
+	StudentServiceI ssi;
+
 	@PostMapping("/createStudent")
 	public ResponseEntity<Student>  createStudent(@RequestBody Student stu){
 		
@@ -23,6 +25,11 @@ public class HomeController {
 		
 		
 		return new ResponseEntity<Student>(student,HttpStatus.CREATED);
-		
+	}
+
+	@GetMapping("/getAllData")
+	public Iterable<Student> getAllData() {
+		Iterable<Student> list = ssi.getAllData();
+		return list;
 	}
 }
