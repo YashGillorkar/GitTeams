@@ -24,8 +24,12 @@ public class HomeController {
 		
 		Student student = ssi.saveStudent(stu);
 		
+		System.out.println(student);
+		
 		return new ResponseEntity<Student>(student,HttpStatus.CREATED);
 	}
+	
+	
 	
 	
 	@DeleteMapping("deleteOp/{id}")
@@ -43,7 +47,7 @@ public class HomeController {
 	}
 	
 	public void m1() {
-		System.out.println("m1");
+		System.out.println("m1_____yash");
 	}
 
 }
